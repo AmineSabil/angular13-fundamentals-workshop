@@ -24,7 +24,7 @@ export class CoursesComponent implements OnInit {
       id: 1,
       title: 'Angular 13 Fundamentals',
       description: 'Learn the fundamentals of Angular 13',
-      percentComplete: 26,
+      percentComplete: 56,
       favorite: true
     },
     {
@@ -43,7 +43,11 @@ export class CoursesComponent implements OnInit {
   }
 
   selectCourse(course) {
-    this.selectedCourse = course;
+    this.selectedCourse = {...course};
+  }
+  
+  saveCourse(courseId) {
+    console.log('SAVE COURSE', courseId);
   }
 
   deleteCourse(courseId) {
